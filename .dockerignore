@@ -1,40 +1,64 @@
-.vscode
-.decontainer
-.benchmarks
-
-lib
-python
-golang
-java
-javascript
-
-# README.md
-CHANGELOG.md
-presentation.md
-build.gradle
-setup.py
-pom.xml
-go.mod
-
-**/.git
-
-# Subsets of .gitignore
-Makefile
-CMakeCache.txt
-cmake_install.cmake
-CMakeFiles
+# Build artifacts
 build/
 build_debug/
-build_release/
-tmp/
-*.log
-bin/
-__pycache__
-.pytest_cache/
-.gradle/
 _deps/
-protos/
-openapitools.json
-build_version.cc
-CPackConfig.cmake
-CPackSourceConfig.cmake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.so
+*.a
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.pytest_cache/
+wheelhouse/
+*.egg-info/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Documentation build
+docs/_build/
+
+# Test artifacts
+tmp/
+test_build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# CI/CD
+.github/
+
+# Node.js (if any)
+node_modules/
+npm-debug.log*
+
+# Rust (if any)
+target/

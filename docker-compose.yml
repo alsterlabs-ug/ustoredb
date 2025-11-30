@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  ustore:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "38709:38709"
+    volumes:
+      - ./data:/var/lib/ustore/data
+    command: ["./rocksdb_server"]
+    environment:
+      - USTORE_CONFIG_PATH=/var/lib/ustore/config.json

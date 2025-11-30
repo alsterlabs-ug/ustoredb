@@ -242,6 +242,30 @@ Here is the map:
 
 ---
 
+## Docker
+
+UStore comes with Docker support for easy deployment. The Docker image includes all three storage backends and uses Apache Arrow Flight RPC.
+
+### Quick Docker Start
+
+```bash
+# Using Docker Compose (recommended)
+docker-compose up --build
+
+# Or using Docker directly
+docker build -t ustore .
+docker run -p 38709:38709 ustore ./rocksdb_server
+```
+
+The Docker image includes:
+- **RocksDB backend** (recommended for production)
+- **LevelDB backend** (simpler alternative)
+- **UCSet backend** (in-memory)
+
+For detailed Docker instructions, see [DOCKER_README.md](DOCKER_README.md).
+
+---
+
 ## Basic Usage
 
 UStore is intended not just as database, but as "build your database" toolkit and an open standard for NoSQL potentially-transactional databases, defining zero-copy binary interfaces for "Create, Read, Update, Delete" operations, or CRUD for short.

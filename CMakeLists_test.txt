@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.16)
+project(TestArrowRocksDB)
+
+set(CMAKE_CXX_STANDARD 17)
+
+# Include Conan dependencies
+include(${CMAKE_SOURCE_DIR}/build/Release/generators/conan_toolchain.cmake)
+list(APPEND CMAKE_PREFIX_PATH ${CMAKE_SOURCE_DIR}/build/Release/generators)
+
+find_package(Arrow REQUIRED)
+find_package(RocksDB REQUIRED)
+
+add_executable(test_arrow_rocksdb test_arrow_rocksdb.cpp)
+
+target_link_libraries(test_arrow_rocksdb
+    Arrow::arrow_static
+    RocksDB::rocksdb
+)

@@ -1,0 +1,69 @@
+# Prerequisites
+*.d
+*.deb
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+*.class
+*.egg-info
+*.jar
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+#*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+dist/
+
+# OS-specific
+.DS_Store
+
+# Temporary Files
+Makefile
+!docs/Makefile
+CMakeCache.txt
+cmake_install.cmake
+CMakeFiles
+build/
+build_debug/
+build_release/
+tmp/
+lib/
+*.log
+bin/
+__pycache__
+.pytest_cache/
+.gradle/
+_deps/
+protos/
+openapitools.json
+build_version.cc
+CPackConfig.cmake
+CPackSourceConfig.cmake
+doxygen_docs/html
+wheelhouse
+registry/
+package-lock.json
+
+# Allow
+!gradle/wrapper/gradle-wrapper.jar
+
+# Sphinx Theme:
+www.unum.cloud-furo
